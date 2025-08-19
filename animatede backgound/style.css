@@ -1,0 +1,103 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Canvas background with starfield */
+#stars {
+  position: fixed;
+  top: 0;
+  mix-blend-mode: screen;
+  left: 0;
+  z-index: -1; /* Stay behind everything */
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom animated cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  filter: blur(10px);
+  background-color: rgba(229, 44, 146, 0.447);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 1000;
+  transition: transform 0.1s ease-out;
+}
+
+/* Glass container */
+.glass {
+  height: 80%;
+  width: 80%;
+  margin: 5% auto;
+  background: rgba(255, 255, 255, 0.03); /* subtle glass blur */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner content inside glass */
+.content {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.content a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.content a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .glass {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
