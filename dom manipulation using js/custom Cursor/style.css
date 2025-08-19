@@ -10,20 +10,20 @@ html,body{
 
 .cursor{
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background-color: rgb(196, 21, 50);
+    background-color: rgba(1, 1, 1, 0.568);
     transform: translate(-50%, -50%);
     z-index: 1;
 }
 
 .shadowCursor{
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background-color: pink;
+    background-color: rgb(9, 173, 244);
     filter: blur(10px);
     transform: translate(-50%, -50%);
 }
